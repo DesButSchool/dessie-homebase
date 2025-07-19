@@ -25,8 +25,24 @@ const games = defineCollection({
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     heroImage: z.string().optional(),
-    itchPage: z.string(),
+    itchPage: z.string()
+  }),
+});
+const music = defineCollection({
+  // Load Markdown and MDX files in the `src/content/games/` directory.
+  loader: glob({ base: "./src/content/music", pattern: "**/*.{md,mdx}" }),
+  // Type-check frontmatter using a schema
+  schema: z.object({
+    title: z.string(),
+    // Transform string to Date object
+    pubDate: z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
+    heroImage: z.string().optional(),
+    ytVid: z.string(),
+    spotify: z.string().optional(),
+    apple: z.string().optional(),
+    amazon: z.string().optional()
   }),
 });
 
-export const collections = { blog, games };
+export const collections = { blog, games, music };
