@@ -8,3 +8,5 @@ heroImage: "/blog-placeholder-3.jpg"
 Site Created, waow.
 This is the entire post, k thnks.
 All content will be moved from [dessie.xyz](https://dessie.xyz)
+
+I luv you Cloudflare &lt;3
