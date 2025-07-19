@@ -51,6 +51,10 @@ const { title, pubDate, updatedDate, heroImage, ytVid, spotify, apple, amazon} =
 			.last-updated-on {
 				font-style: italic;
 			}
+            .ytvid {
+                display: block;
+                align: center;
+            }
 		</style>
 	</head>
 
@@ -76,9 +80,8 @@ const { title, pubDate, updatedDate, heroImage, ytVid, spotify, apple, amazon} =
 						<h1>{title}</h1>
 						<hr />
 					</div>
-                    <iframe width="560" height="315" src={ytVid} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="ytvid" width="560" height="315" src={ytVid} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 					<slot />
-                    <p>{spotify}{apple}{amazon}</p>
 				</div>
 			</article>
 		</main>

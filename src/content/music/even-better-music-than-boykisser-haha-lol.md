@@ -1,6 +1,5 @@
 ---
-title: "Example Game"
-description: "An Example Game"
+title: "Even better music than boykisser haha lol"
 pubDate: "Jul 19 2025"
 updatedDate: "Jul 19 2025"
 heroImage: "/blog-placeholder-2.jpg"
