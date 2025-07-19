@@ -1,0 +1,3 @@
+- Create Favicon
+- Create Music page
+- The rest
