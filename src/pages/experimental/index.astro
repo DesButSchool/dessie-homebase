@@ -1,0 +1,23 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Experimental Pages</h1>
+			<p>
+				Pages under this path are actively being developed to be considered for permanant inclusion on this site. These pages may be frequently modified, relocated, or deleted. As such, we do not recommend linking to these pages on external sites.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
