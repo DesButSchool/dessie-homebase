@@ -14,5 +14,16 @@ const blog = defineCollection({
     heroImage: z.string().optional(),
   }),
 });
+const tree = defineCollection({
+  loader: glob({ base: "./src/content/tree", pattern: "**/*.{md,mdx}" }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    links: z.array(z.object({
+      link: z.string(),
+      name: z.string(),
+    })),
+  }),
+});
 
-export const collections = {blog};
+export const collections = {blog, tree};

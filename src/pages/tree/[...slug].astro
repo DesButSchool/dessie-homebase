@@ -1,0 +1,21 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import LinkTree from '../../layouts/LinkTree.astro';
+import { render } from 'astro:content';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('tree');
+	return posts.map((post) => ({
+		params: { slug: post.id },
+		props: post,
+	}));
+}
+type Props = CollectionEntry<'tree'>;
+
+const post = Astro.props;
+const { Content } = await render(post);
+---
+
+<LinkTree {...post.data}>
+	<Content />
+</LinkTree>
