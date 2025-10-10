@@ -14,21 +14,16 @@ const blog = defineCollection({
     heroImage: z.string().optional(),
   }),
 });
-const music = defineCollection({
-  // Load Markdown and MDX files in the `src/content/games/` directory.
-  loader: glob({ base: "./src/content/music", pattern: "**/*.{md,mdx}" }),
-  // Type-check frontmatter using a schema
+const tree = defineCollection({
+  loader: glob({ base: "./src/content/tree", pattern: "**/*.{md,mdx}" }),
   schema: z.object({
     title: z.string(),
-    // Transform string to Date object
-    pubDate: z.coerce.date(),
-    updatedDate: z.coerce.date().optional(),
-    heroImage: z.string().optional(),
-    ytVid: z.string(),
-    spotify: z.string().optional(),
-    apple: z.string().optional(),
-    amazon: z.string().optional()
+    description: z.string(),
+    links: z.array(z.object({
+      link: z.string(),
+      name: z.string(),
+    })),
   }),
 });
 
-export const collections = { blog, music };
+export const collections = {blog, tree};
