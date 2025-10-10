@@ -50,21 +50,39 @@ const { title, links, description} = Astro.props;
 			.last-updated-on {
 				font-style: italic;
 			}
+			.btn {
+
+      			display: inline-block;
+      			margin-top: 1.5rem;
+      			background: #2b6cb0;
+      			color: white;
+      			padding: 0.8rem 1.8rem;
+      			border-radius: 6px;
+      			text-decoration: none;
+      			font-weight: 500;
+      			transition: background 0.3s;
+    			}
+
+    		.btn:hover {
+      			background: #1a4f8a;
+    		}
 		</style>
 	</head>
 
 	<body>
 		<Header />
 		<main>
-            <h1>{title}</h1>
-            <h5>{description}</h5>
+            <h1 style="text-align: center;">{title}</h1>
+            <h5 style="text-align: center;">{description}</h5>
             <hr>
-            <ul>
+			<div style="text-align: center;">
+            <ul style=" display: inline-block;text-align: left;">
                 <!-- TODO: Center and stylize as buttons  -->
                 {links.map((item) => (
-                    <li><a href={item.link}>{item.name}</a></li>
+                    <li><a href={item.link} class="btn" target="_blank">{item.name}</a></li>
                 ))}
             </ul>
+			</div>
 		</main>
 		<Footer />
 	</body>
