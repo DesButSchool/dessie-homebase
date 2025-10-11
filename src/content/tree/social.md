@@ -12,4 +12,8 @@ links:
     name: "Chess.com"
   - link: "https://bsky.app/profile/dessieowo.com"
     name: "Bluesky"
+  - link: "https://dessieowo.itch.io/"
+    name: "Itch.io"
+  - link: "https://steamcommunity.com/id/DesmosGraphing/"
+    name: "Steam (Player)"
 ---
