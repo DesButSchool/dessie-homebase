@@ -2,7 +2,7 @@
 title: "Social Accounts"
 description: "External social accounts for DessieOwO"
 links: 
-  - link: "mailto:dessieowo.com"
+  - link: "mailto:dessie@dessieowo.com"
     name: "Email"
   - link: "/blog"
     name: "Blog"
@@ -16,4 +16,8 @@ links:
     name: "Itch.io"
   - link: "https://steamcommunity.com/id/DesmosGraphing/"
     name: "Steam (Player)"
+  - link: "https://youtube.com/@dessieowo"
+    name: "Youtube"
+  - link: "https://dessieowo.bandcamp.com/"
+    name: "Bandcamp (Artist)"
 ---
