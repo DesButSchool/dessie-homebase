@@ -1,0 +1,50 @@
+<div class="EWarnModal">
+    <div class="EWarnMessage">
+        <h2>Hold up!</h2>
+        <p>This content may contain explicit sexual, violent, or otherwise disturbing content. By proceeding, you confirm that you are of the appropriate age to view such content and that you wish to do so.</p>
+        <button id="EWarnAgree" class="EWarnButton">I agree and am over 18</button>
+        <button id="EWarnDisagree" class="EWarnButton">Take me back</button>
+    </div>
+</div>
+<style>
+    .EWarnModal{
+        display:block;
+        position:fixed;
+        z-index:1;
+        padding-top: 100px;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        left: 0;
+        top: 0;
+        background-color: rgb(0,0,0);
+    }
+    .EWarnMessage{
+        background-color: #fefefe;
+        margin: auto;
+        padding: 40px;
+        border: 1px solid #888;
+        width: 50%;
+        border-radius: 25px;
+        text-align:center;
+    }
+    .EWarnButton{
+        border-style: none;
+        padding:10px;
+    }
+    .EWarnButton:hover{
+        box-shadow: 5px;
+    }
+    #EWarnAgree{
+        background-color:lightgreen;   
+    }
+    #EWarnDisagree{
+        background-color:lightcoral;
+    }
+</style>
+<script>
+    document.getElementById("EWarnAgree").addEventListener("click", eWarnAgree);
+    function eWarnAgree(){
+        document.getElementsByClassName("EWarnModal").style.display="none";
+    }
+</script>
