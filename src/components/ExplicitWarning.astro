@@ -1,4 +1,4 @@
-<div class="EWarnModal">
+<div class="EWarnModal" id="EWarnModal">
     <div class="EWarnMessage">
         <h2>Hold up!</h2>
         <p>This content may contain explicit sexual, violent, or otherwise disturbing content. By proceeding, you confirm that you are of the appropriate age to view such content and that you wish to do so.</p>
@@ -43,8 +43,28 @@
     }
 </style>
 <script>
-    document.getElementById("EWarnAgree").addEventListener("click", eWarnAgree);
+    const EWarnAgree = document.querySelector("#EWarnAgree");
+    const EWarnDisagree = document.querySelector("#EWarnDisagree");
+    const EWarnModal = document.querySelector("#EWarnModal");
+    //document.getElementById("EWarnAgree").addEventListener("click", eWarnAgree);
+    if(EWarnAgree instanceof HTMLButtonElement){
+        EWarnAgree.addEventListener("click", eWarnAgree);
+    }else{
+        console.error("Could not find explicit content agree button.");  
+    }
+    if(EWarnDisagree instanceof HTMLButtonElement){
+        EWarnDisagree.addEventListener("click", eWarnDisagree);
+    }else{
+        console.error("Could not find explicit content disagree button."); 
+    }
     function eWarnAgree(){
-        document.getElementsByClassName("EWarnModal").style.display="none";
+        if (EWarnModal instanceof HTMLDivElement){
+            EWarnModal.style.display="none";
+        }else{
+            console.error("Could not find explicit content modal.");  
+        }
+    }
+    function eWarnDisagree(){
+        window.history.back();
     }
 </script>
