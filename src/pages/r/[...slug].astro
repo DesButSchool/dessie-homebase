@@ -45,6 +45,14 @@ export function getStaticPaths() {
       slug: "bsky",
       rUrl: "https://bsky.app/profile/dessieowo.com"
     },
+    {
+      slug: "tumblr",
+      rUrl: "https://dessiexyz.tumblr.com/"
+    },
+    {
+      slug: "credly",
+      rUrl: "https://www.credly.com/users/dessie"
+    },
   ];
 
   return pages.map(({ slug, rUrl }) => {
@@ -55,7 +63,6 @@ export function getStaticPaths() {
   });
 }
 
-const rTarget = [["steam","amznmusic","kofi"],["","",""]];
 const { rUrl } = Astro.props;
 return Astro.redirect(rUrl);
 ---
