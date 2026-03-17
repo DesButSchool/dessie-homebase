@@ -1,0 +1,70 @@
+---
+export function getStaticPaths() {
+  const pages = [
+    {
+      slug: undefined,
+      url: ".//"
+    },
+    {
+      slug: "mustard",
+      rUrl: "https://hot-singles.link"
+    },
+    {
+      slug: "men",
+      rUrl: "https://weaksubmissive.men"
+    },
+    {
+      slug: "youtube",
+      rUrl: "https://www.youtube.com/@DessieOwO"
+    },
+    {
+      slug: "yt",
+      rUrl: "https://www.youtube.com/@DessieOwO"
+    },
+    {
+      slug: "github",
+      rUrl: "https://github.com/DessieOwO"
+    },
+    {
+      slug: "git",
+      rUrl: "https://github.com/DessieOwO"
+    },
+    {
+      slug: "steam",
+      rUrl: "https://steamcommunity.com/id/DessieOwO"
+    },
+    {
+      slug: "amznmusic",
+      rUrl: "https://music.amazon.com/artists/B0FCS94KC8/dessieowo"
+    },
+    {
+      slug: "kofi",
+      rUrl: "https://ko-fi.com/dessieowo"
+    },
+    {
+      slug: "bsky",
+      rUrl: "https://bsky.app/profile/dessieowo.com"
+    },
+    {
+      slug: "tumblr",
+      rUrl: "https://dessiexyz.tumblr.com/"
+    },
+    {
+      slug: "credly",
+      rUrl: "https://www.credly.com/users/dessie"
+    },
+  ];
+
+  return pages.map(({ slug, rUrl }) => {
+    return {
+      params: { slug },
+      props: { rUrl },
+    };
+  });
+}
+
+const { rUrl } = Astro.props;
+return Astro.redirect(rUrl);
+---
+<p>You should have been redirected automatically. If you see this, it's probably my fault tbh. :p</p>
+<p>Intended link: { rUrl } (just go to it manually ig)</p>
